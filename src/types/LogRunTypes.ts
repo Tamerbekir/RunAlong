@@ -1,5 +1,5 @@
 export interface LogRunInterface {
-  miles: string
+  miles: number
   duration: string
   pace: string
 }
