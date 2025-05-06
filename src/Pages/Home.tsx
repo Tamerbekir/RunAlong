@@ -4,7 +4,6 @@ import LogRunButton from "../Components/LogRunButton";
 import DeleteLogDataButton from "../Components/DeleteLogDataButton";
 import LogRunComponent from "../Components/LogRunComponent";
 import TotalRunData from "../Components/TotalRunData";
-
 export default function Home() {
   const [runData, setRunData] = useState<LogRunInterface>({
     miles: "",
@@ -71,15 +70,6 @@ export default function Home() {
           value={runData.duration}
           onChange={(event) =>
             setRunData({ ...runData, duration: event.target.value })
-          }
-        />
-        <p>Pace</p>
-        <input
-          type="text"
-          placeholder="Pace"
-          value={runData.pace}
-          onChange={(event) =>
-            setRunData({ ...runData, pace: event.target.value })
           }
         />
       </form>
