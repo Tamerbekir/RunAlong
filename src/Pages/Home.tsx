@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import LogRunButton from "../Components/LogRunButton";
 import DeleteLogDataButton from "../Components/DeleteLogDataButton";
 import LogRunComponent from "../Components/LogRunComponent";
+import TotalRunData from "../Components/TotalRunData";
 
 export default function Home() {
   const [runData, setRunData] = useState<LogRunInterface>({
@@ -92,6 +93,7 @@ export default function Home() {
             text="Delete Run"
             onClick={() => handleDeleteRunData(index)}
           />
+          <TotalRunData data={Number(data) + Number(runData.miles)} />
         </div>
       ))}
       <h2>Total Miles</h2>
